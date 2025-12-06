@@ -7,6 +7,11 @@ footer{
         h1{
             margin: 25px 10px;
             color: #fff;
+
+            @media(max-width: 768px){
+                font-size: 1.5rem;
+                margin: 20px 5px;
+            }
         }
 
 
@@ -16,12 +21,23 @@ footer{
 
         .footer-redes-sociales{
 
+            h2{
+                margin: 25px 10px;
+                color: #fff;
+
+            }
+
             ul{
                 list-style: none;
                 margin-bottom: 2rem;
                 li{
                     display: inline-block;
                     margin: 0 1rem;
+
+                    @media(max-width: 768px){
+                        display: block;
+                        margin: 8px 0;
+                    }
 
                     a{
                         color: #fff;
@@ -36,15 +52,31 @@ footer{
             }
         }
 
+            h2{
+                margin: 25px 10px;
+                color: #fff;
+            }
+
         .footer-informacion{
             display: flex;
             justify-content: center;
             gap: 4rem;
             margin-bottom: 2rem;
 
+            
+
+            @media(max-width: 768px){
+                flex-direction: column;
+                gap: 16px;
+            }
+
             .footer-contacto{
                 margin-bottom: 0.5rem;
                 margin: 0.3rem 0;
+
+                @media(max-width: 768px){
+                    margin-bottom: 1rem;
+                }
                        
                 h3{
 
@@ -61,6 +93,10 @@ footer{
             .footer-faq{
                 margin-bottom: 0.5rem;
                 margin: 0.3rem 0;
+
+                @media(max-width: 768px){
+                    margin-bottom: 1rem;
+                }
 
                 h3{
 
@@ -88,6 +124,10 @@ footer{
         padding-top: 1.5rem;
         border-top: 1px solid #fff;
         color: #fff;
+
+        @media(max-width: 768px){
+            font-size: 0.9rem;
+        }
 
     }
 }
