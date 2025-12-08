@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galería Mujeres</title>
+
+    <link rel="stylesheet/less" href="/less/stylesgaleria.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.3"></script>
+  </head>
+  <body>
+    {{> header}}
+    <main>
+      <section class="section section-ropa">
+        <h2>Sección de Mujer</h2>
+        {{> galeriamujeres}}
+      </section>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
