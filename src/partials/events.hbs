@@ -1,0 +1,14 @@
+<section class="events-section">
+  <div class="events-container">
+    <div class="events-header">
+      <h2 class="events-title">Próximos Eventos</h2>
+      <p class="events-subtitle">Participa en nuestras actividades y presentaciones especiales.</p>
+    </div>
+
+    <div class="events-grid">
+      {{#each eventos}}
+        {{> event-card}}
+      {{/each}}
+    </div>
+  </div>
+</section>

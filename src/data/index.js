@@ -1,16 +1,21 @@
 import { getGaleriaData } from "./pages/Galeria";
-export const getData = (page)=>{
+import { getEventosData } from "./pages/Eventos";
+
+export const getData = (page) => {
     console.log("Getting Context Data for page", page);
     let contextData = {};
     switch (page) {
         case "/index.html":
             contextData = getGaleriaData();
             break;
+        case "/eventos.html":
+            contextData = getEventosData();
+            break;
         default:
-            contextData = { ...contextData }
+            contextData = { ...contextData };
     }
-    return {...contextData, ...getAllPageContext()};
-}
+    return { ...contextData, ...getAllPageContext() };
+};
 
 
 function getAllPageContext() {
