@@ -1,0 +1,14 @@
+<section class="gallery-section">
+  <div class="gallery-container">
+    <div class="gallery-header">
+      <h2 class="gallery-title">Nuestro Catálogo</h2>
+      <p class="gallery-subtitle">Explora nuestra colección exclusiva para la comunidad de ballet.</p>
+    </div>
+
+    <div class="gallery-grid">
+      {{#each galeriaproductos}}
+        {{> gallery-card}}
+      {{/each}}
+    </div>
+  </div>
+</section>

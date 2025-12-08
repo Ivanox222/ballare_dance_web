@@ -1,0 +1,17 @@
+<div class="event-card" data-event-id="{{id}}">
+  <div class="event-image">
+    <img src="{{img}}" alt="{{title}}">
+    {{#if badge}}
+      <span class="event-badge {{badgeClass}}">{{badge}}</span>
+    {{/if}}
+  </div>
+  <div class="event-content">
+    <div class="event-meta">
+      <span class="event-date">{{date}}</span>
+      <span class="event-time">{{time}}</span>
+    </div>
+    <h3 class="event-name">{{title}}</h3>
+    <p class="event-location">📍 {{location}}</p>
+    <a href="#" class="btn-event">Ver Detalles</a>
+  </div>
+</div>

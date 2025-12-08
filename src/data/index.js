@@ -1,6 +1,7 @@
 import { getGaleriaData } from "./pages/Galeria";
 import { getHombresData } from "./pages/hombre.js";
 import { getMujeresData } from "./pages/mujeres.js";
+import { getEventosData } from "./pages/Eventos";
 
 export const getData = (page) => {
     console.log("Getting Context Data for page", page);
@@ -13,6 +14,10 @@ export const getData = (page) => {
             contextData = getGaleriaData();
             break;
 
+        case "/eventos.html":
+            contextData = getEventosData();
+            break;
+
         case "/hombre.html":
             contextData = getHombresData ? getHombresData() : {};
             break;
@@ -23,7 +28,6 @@ export const getData = (page) => {
 
         default:
             contextData = {};
-            break;
     }
 
     return {
