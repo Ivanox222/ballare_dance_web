@@ -9,8 +9,7 @@ export const getData = (page) => {
     let contextData = {};
 
     switch (page) {
-
-        case "/index.html":
+        case "/galeria.html":
             contextData = getGaleriaData();
             break;
 
