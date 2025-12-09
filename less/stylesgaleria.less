@@ -1,66 +1,88 @@
 @import "variablesgaleria.less";
 @import "galeriamixins.less";
 @import "mainstyles.less";
+
 body {
   background-color: @body-bg;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.row {
-  .flex();
-  .justify-center();
-  .flex-wrap();
-  gap: 1.5rem;
-  padding: 1rem;
+main {
+  .main-wrapper();
+  flex: 1;
+}
+
+.section-ropa {
+  .white-container();
+
+  h2 {
+    .section-title();
+    width: 100%;
+  }
+}
+
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .card {
   .card-base();
+  width: 250px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.05);
 
   .card-image {
+    width: 100%;
+    height: 180px;
+    background: #fff;
+
     img {
-      .img-responsive();
-      height: 160px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
 
-  .card-header {
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 0.7rem 1rem;
-    color: @color-primary;
-  }
-
   .card-content {
-    .card-content-base();
+    background-color: @color-bg;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3, strong, span {
+      display: block;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.85rem;
+      opacity: 0.9;
+      margin: 0;
+    }
   }
 
   .card-action {
-    .card-action-base();
-  }
-}
+    background-color: #fff0f6;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8rem;
+    border-top: none;
+    transition: background 0.2s;
 
-.section {
-  .section-wrapper();
-
-  h2 {
-    .section-title();
-  }
-}
-
-@media (max-width: 992px) {
-  .card {
-    width: 45% !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .row {
-    .flex-column();
-    .items-center();
-  }
-
-  .card {
-    width: 90% !important;
+    &:hover {
+      background-color: #ffe6f2;
+    }
   }
 }
