@@ -1,0 +1,138 @@
+.center-content() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-panel {
+    min-height: 80vh;
+    padding: 60px 20px;
+    background-size: cover; 
+    background-position: center; 
+    color: @cream-white;
+    position: relative; 
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: fade(@coffee-medium, 55%); 
+        z-index: 1;
+    }
+
+    .hero-content {
+        .center-content();
+        position: relative;
+        z-index: 2; 
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-subtitle {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero-tagline {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    /* === CONTENEDOR DE TARJETAS ZIG-ZAG === */
+    .hero-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .card {
+            background: fade(@cream-white, 95%);
+            color: @coffee-medium;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-align: left;
+
+            &:hover {
+                transform: translateY(-8px); 
+                background: @cream-white;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+            .card-description {
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+
+            /* ZIG-ZAG: Impares a la izquierda */
+            &:nth-child(odd) {
+                align-self: flex-start;
+                margin-left: 0;
+            }
+            
+            /* ZIG-ZAG: Pares a la derecha */
+            &:nth-child(even) {
+                align-self: flex-end;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-cards-container {
+            .card {
+                max-width: 300px;
+                
+                &:nth-child(odd) {
+                    margin-left: 0;
+                }
+                
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        .hero-cards-container {
+            .card {
+                &:nth-child(odd) {
+                    margin-left: 80px;
+                }
+                
+                &:nth-child(even) {
+                    margin-right: 80px;
+                }
+            }
+        }
+    }
+}

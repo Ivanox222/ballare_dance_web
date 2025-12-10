@@ -1,0 +1,27 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* asegurar altura completa para que min-height y flex funcionen */
+html, body {
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ya estaba, reforzado */
+    background-color:@cream-white;
+    color: @gold-medium;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    @media(min-width: 768px){
+        padding-top: 80px;
+    }
+}
+
+main {
+    flex: 1 0 auto; /* ocupa el espacio disponible para empujar el footer abajo */
+    padding: 24px 32px;
+}

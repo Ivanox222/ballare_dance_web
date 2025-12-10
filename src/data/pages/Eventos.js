@@ -7,7 +7,7 @@ export const getEventosData = () => {
         date: "15 Dic, 2025",
         time: "10:00 AM",
         location: "Estudio Principal, Ballare",
-        img: "https://picsum.photos/400/300?random=10",
+        img: "/imagenes/eventos1.jpg",
         badge: "Nuevo",
         badgeClass: ""
       },
@@ -17,7 +17,7 @@ export const getEventosData = () => {
         date: "25-31 Dic, 2025",
         time: "Todo el día",
         location: "Tienda Online y Física",
-        img: "https://picsum.photos/400/300?random=11",
+        img: "/imagenes/eventos2.jpg",
         badge: "Promo",
         badgeClass: "promo"
       },
@@ -27,7 +27,7 @@ export const getEventosData = () => {
         date: "24 Dic, 2026",
         time: "18:00 PM",
         location: "Teatro José Francisco Saybe",
-        img: "https://picsum.photos/400/300?random=12",
+        img: "/imagenes/eventos3.jpg",
         badge: "",
         badgeClass: ""
       },
@@ -37,7 +37,7 @@ export const getEventosData = () => {
         date: "05 Feb, 2026",
         time: "14:00 PM",
         location: "Salón Anexo",
-        img: "https://picsum.photos/400/300?random=13",
+        img: "/imagenes/eventos4.jpg",
         badge: "",
         badgeClass: ""
       }

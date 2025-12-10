@@ -1,0 +1,102 @@
+@import "variables.less";
+
+.center-content() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centrado vertical
+    align-items: center;  // Centrado horizontal
+    text-align: center;
+}
+
+.hero_panel {
+    // Ajustes de fondo y tamaño
+    min-height: 80vh; // Aumentado para un impacto visual
+    padding: 60px 20px;
+    background-size: cover; 
+    background-position: center; 
+    color: @cream-white; // Usamos el blanco cálido para el texto principal
+    position: relative; 
+
+    // Opcional: Capa de superposición para mejorar la legibilidad del texto
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Usamos un color oscuro semi-transparente que complemente el café */
+        background-color: fade(@coffee-medium, 55%); 
+        z-index: 1;
+    }
+
+    .hero-content {
+        .center-content();
+        position: relative;
+        z-index: 2; 
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar */
+    }
+
+    .hero-subtitle {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+    
+    .hero-tagline { /* Estilo para el texto de relleno que añadiste */
+        margin-top: 20px;
+        font-size: 1.1rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    /* === CONTENEDOR DE TARJETAS === */
+    .hero-cards-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+        padding-top: 20px;
+
+        @media(max-width: 768px){
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* === ESTILOS DE LA TARJETA INDIVIDUAL === */
+        .card {
+            background: fade(@cream-white, 95%); /* Fondo blanco crema semi-transparente */
+            color: @coffee-medium; /* Texto café para contraste */
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-align: left; 
+
+            &:hover {
+                transform: translateY(-5px); 
+                background: @cream-white; /* Se hace completamente opaco al pasar el ratón */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+            }
+
+            .card-description {
+                font-size: 0.9rem;
+                line-height: 1.3;
+            }
+        }
+    }
+}
