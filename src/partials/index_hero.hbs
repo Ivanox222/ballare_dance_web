@@ -1,17 +1,18 @@
-<section class="hero-panelimg">
-  <div class="hero-slidesimg">
-    {{#each heroImages}}
-      <div class="hero-slideimg">
-        <img src="{{img}}" alt="{{alt}}" />
-        <div class="hero-overlayimg">
-          <h1>{{title}}</h1>
-          {{#if subtitle}}
-            <p>{{subtitle}}</p>
-          {{/if}}
-        </div>
-      </div>
-    {{/each}}
-  </div>
-  <button class="hero-previmg">&#10094;</button>
-  <button class="hero-nextimg">&#10095;</button>
-</section>
+<div class="hero-panelimg">
+<div class="hero-slidesimg">
+{{#each heroImages}}
+<div class="hero-slideimg">
+<img src="{{img}}" alt="{{alt}}" />
+<div class="hero-overlayimg">
+<h1>{{title}}</h1>
+{{#if subtitle}}
+<p>{{subtitle}}</p>
+{{/if}}
+</div>
+</div>
+{{/each}}
+</div>
+
+<button class="hero-btn prev">&#10094;</button>
+<button class="hero-btn next">&#10095;</button>
+</div>

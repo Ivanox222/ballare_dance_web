@@ -1,39 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let currentIndex = 0;
+let currentIndex = 0;
+const slides = document.querySelectorAll('.hero-slideimg');
+const totalSlides = slides.length;
 
-  const slidesContainer = document.querySelector('.hero-slidesimg');
-  const slides = document.querySelectorAll('.hero-slideimg');
-  const total = slides.length;
 
-  function showSlide(index) {
-    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-  }
+function showSlide(index) {
+const slideWidth = slides[0].clientWidth;
+document.querySelector('.hero-slidesimg').style.transform = `translateX(${-index * slideWidth}px)`;
+}
 
-  let interval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % total;
-    showSlide(currentIndex);
-  }, 3000);
 
-  const prevBtn = document.querySelector('.hero-previmg');
-  const nextBtn = document.querySelector('.hero-nextimg');
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + total) % total;
-    showSlide(currentIndex);
-    resetInterval();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % total;
-    showSlide(currentIndex);
-    resetInterval();
-  });
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % total;
-      showSlide(currentIndex);
-    }, 3000);
-  }
+document.querySelector('.next').addEventListener('click', () => {
+currentIndex = (currentIndex + 1) % totalSlides;
+showSlide(currentIndex);
 });
+
+
+document.querySelector('.prev').addEventListener('click', () => {
+currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+showSlide(currentIndex);
+});
+
+
+window.addEventListener('resize', () => showSlide(currentIndex));
