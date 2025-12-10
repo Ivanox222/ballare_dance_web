@@ -1,23 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
-  const slidesContainer = document.querySelector('.hero-slides');
-  const slides = document.querySelectorAll('.hero-slide');
+
+  const slidesContainer = document.querySelector('.hero-slidesimg');
+  const slides = document.querySelectorAll('.hero-slideimg');
   const total = slides.length;
 
-  // Función para mostrar el slide actual
   function showSlide(index) {
     slidesContainer.style.transform = `translateX(-${index * 100}%)`;
   }
 
-  // Cambiar slide automáticamente cada 3 segundos
   let interval = setInterval(() => {
     currentIndex = (currentIndex + 1) % total;
     showSlide(currentIndex);
   }, 3000);
 
-  // Botones de navegación
-  const prevBtn = document.querySelector('.hero-prev');
-  const nextBtn = document.querySelector('.hero-next');
+  const prevBtn = document.querySelector('.hero-previmg');
+  const nextBtn = document.querySelector('.hero-nextimg');
 
   prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + total) % total;
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resetInterval();
   });
 
-  // Reinicia el intervalo al hacer clic
   function resetInterval() {
     clearInterval(interval);
     interval = setInterval(() => {

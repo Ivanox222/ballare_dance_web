@@ -1,9 +1,9 @@
-<section class="hero-panel">
-  <div class="hero-slides">
+<section class="hero-panelimg">
+  <div class="hero-slidesimg">
     {{#each heroImages}}
-      <div class="hero-slide">
+      <div class="hero-slideimg">
         <img src="{{img}}" alt="{{alt}}" />
-        <div class="hero-overlay">
+        <div class="hero-overlayimg">
           <h1>{{title}}</h1>
           {{#if subtitle}}
             <p>{{subtitle}}</p>
@@ -12,8 +12,6 @@
       </div>
     {{/each}}
   </div>
-
-  <!-- Botones de navegación -->
-  <button class="hero-prev">&#10094;</button>
-  <button class="hero-next">&#10095;</button>
+  <button class="hero-previmg">&#10094;</button>
+  <button class="hero-nextimg">&#10095;</button>
 </section>
