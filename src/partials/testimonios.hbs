@@ -1,0 +1,28 @@
+<section class="testimonios-section">
+   <div class="titulo">
+    <h1>Testimonios</h1>
+    </div>
+<div class="testimonios-container">
+  {{#each testimonios}}
+    <div class="testimonio-card">
+      <div class="testimonio-img-wrapper">
+        <img src="{{img}}" alt="Foto de {{name}}" class="testimonio-img" />
+      </div>
+      <div class="testimonio-content">
+        <div class="testimonio-name">{{name}}</div>
+        <div class="testimonio-role">{{role}}</div>
+        <div class="testimonio-comment">"{{comment}}"</div>
+        <div class="testimonio-rating">
+          {{#each [1,2,3,4,5]}}
+            {{#ifCond this ../rating}}
+              ★
+            {{else}}
+              ☆
+            {{/ifCond}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+</section>
