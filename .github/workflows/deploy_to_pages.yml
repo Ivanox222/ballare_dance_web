@@ -19,7 +19,7 @@ jobs:
   build:
     environment:
       name: github-pages
-      url: ${{ steps.github-pages.output.url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Clonar Repositorio
