@@ -7,7 +7,7 @@ export const getTestimoniosData = () => {
         role: "Madre de alumna",
         comment:
           "La academia Ballare ha transformado la disciplina y seguridad de mi hija. El ambiente es hermoso y las maestras muy dedicadas.",
-        img: "https://picsum.photos/400/400?random=20",
+        img: "/galeria/persona1.png",
         rating: 5
       },
       {
@@ -16,7 +16,7 @@ export const getTestimoniosData = () => {
         role: "Estudiante de ballet adulto",
         comment:
           "Nunca pensé que podría aprender ballet a mi edad, pero aquí me hicieron sentir bienvenido desde el primer día.",
-        img: "https://picsum.photos/400/400?random=21",
+        img: "/galeria/persona2.png",
         rating: 4
       },
       {
@@ -25,7 +25,7 @@ export const getTestimoniosData = () => {
         role: "Exalumna",
         comment:
           "Gracias a la formación recibida en Ballare pude ingresar a un conservatorio internacional. Excelencia total.",
-        img: "https://picsum.photos/400/400?random=22",
+        img: "/galeria/persona3.png",
         rating: 5
       },
       {
@@ -34,7 +34,7 @@ export const getTestimoniosData = () => {
         role: "Madre de alumno",
         comment:
           "La academia no solo enseña técnica, también fomenta valores y compromiso. Muy recomendados.",
-        img: "https://picsum.photos/400/400?random=23",
+        img: "/galeria/persona4.png",
         rating: 5
       }
     ]
